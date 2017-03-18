@@ -1,0 +1,154 @@
+\documentclass{article}
+\usepackage[margin=4cm,includefoo t]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{graphicx} %allow for import of images
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\graphicspath{{Pictures/}}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsfonts}
+%bibliography
+\usepackage[numbers,sort&compress]{natbib}
+
+% star
+\newcommand{\mystar}{{\fontfamily{lmr}\selectfont$\star$}}
+
+% Header and footer
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+%
+
+%Highligth text
+\usepackage{soul}
+\usepackage{color}
+\DeclareRobustCommand{\hlRed}[1]{{\sethlcolor{red}\hl{#1}}}
+\usepackage{xcolor}
+\newcommand{\highlight}[1]{%
+  \colorbox{red!50}{$\displaystyle#1$}}
+
+\begin{document}
+%title page
+
+\begin{titlepage}
+	\begin{flushleft}
+	\vspace*{-3.5cm}
+	\hspace*{-3 cm}
+		\includegraphics[width=7cm]{pictures/Logo.png} % also works with logo.pdf
+	\end{flushleft}
+	\textsc{\Large}\\
+	[2cm]
+	\begin{center}
+	\textsc{\large 	Technical University of Denmark}\\
+	[0.5cm]
+	\textsc{\LARGE \mystar} \\
+	[0.5cm]
+	\textsc{\LARGE Advanced Engineering Mathematics}\\
+	[2cm]
+	\noindent\makebox[\linewidth]{\rule{\paperwidth}{1.5 pt}}\\
+	[5mm]
+	\huge{\bfseries Size structured fish populations} \\
+	[0.2 cm]
+
+	\noindent\makebox[\linewidth]{\rule{\paperwidth}{1.5 pt}}\\
+	[-0.75 cm]
+	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.5 pt}}\\
+
+	\textsc{\Large}\\
+	[3cm]
+	\end{center}
+	\begin{flushright}
+	\textsc{\large Group members\\}
+	\line(1,0){100}\\
+	Andreas Harmuth \\
+	Christian E. Petersen\\
+	Nick Rose\\
+	Bosse Bandowski\\
+	Jack Rose\\
+	Josh G. Whillock\\
+	[1cm]
+	\end{flushright}
+	
+	\begin{center}
+		Date: 12/04/2017
+	\end{center}
+\end{titlepage}
+
+% Before TOC
+\addcontentsline{toc}{section}{\numberline{}Problem formulation}
+\addcontentsline{toc}{section}{\numberline{}Abstract}
+\addcontentsline{toc}{section}{\numberline{}Reading guide}
+\pagenumbering{roman}
+\section*{Problem formulation}
+The boundary on the project. What will we focus on? What have we left out and why?
+\newpage
+\section*{Abstract}
+\newpage
+\section*{Reading guide}
+A "guide" to the project. Are there anything specific in the way the report is written the reader should be aware of.
+\newpage
+
+% After TOC
+
+\cleardoublepage
+%
+
+%set pagenumbering to normal
+\pagenumbering{arabic}
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+%table of content
+\tableofcontents 
+\thispagestyle{empty} %remove page number
+\cleardoublepage
+\setcounter{page}{1}
+%
+
+
+%Exercise 1
+\section{Solving the conservation equation}\label{sec:Ex1}
+\subsection{}\label{sec:Ex1A}
+
+
+
+%Exercise 2
+\section{What is the biomass of a cohort of fish?}\label{sec:Ex2}
+\subsection{}\label{sec:Ex2A}
+
+
+
+%Exercise 3
+\section{Now add fishing}\label{sec:Ex3}
+\subsection{}\label{sec:Ex3A}
+
+
+%Exercise 4
+\section{How fast can a fish stock recover?}\label{sec:Ex4}
+\subsection{}\label{sec:Ex4A}
+
+
+
+%Exercise 5
+\section{Why do fish make small eggs?}\label{sec:Ex5}
+\subsection{}\label{sec:Ex5A}
+
+
+
+%Exercise 6
+\section{Solutions to the size distribution with realistic growth rates}\label{sec:Ex6}
+\subsection{}\label{sec:Ex6A}
+
+\cleardoublepage
+\appendix
+\section{Title of Appendix A}
+% the \\ insures the section title is centered below the phrase: AppendixA
+
+Text of Appendix A is Here
+
+\section{Title of Appendix B}
+% the \\ insures the section title is centered below the phrase: Appendix B
+
+Text of Appendix B is Here
+\end{document}
